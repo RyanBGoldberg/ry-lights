@@ -2,7 +2,7 @@ import rtmidi.midiutil as midiutil
 import time
 import pigpio
 
-from setup import initialize
+from setup_example import initialize
 
 from midi_in.InputControl import InputControl
 from midi_in.InputLogger import InputLogger
