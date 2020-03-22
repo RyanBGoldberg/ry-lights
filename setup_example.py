@@ -18,6 +18,7 @@ def initialize(app, params):
     # Create Actions
     actionWhite = app.addAction(ActionColor(params))
     actionBlue = app.addAction(ActionColor(params, Color(0, 0, 255)))
+    actionGreen = app.addAction(ActionColor(params, Color(0, 255, 0)))
     actionStrobe = app.addAction(ActionStrobe(params))
     actionStrobeMute = app.addAction(ActionStrobeMute(params))
     actionMute = app.addAction(ActionMute(params))
@@ -30,6 +31,7 @@ def initialize(app, params):
     app.addInput(actionStrobeMute, "hold", 47, "On")
 
     app.addInput(actionBlue, "knob", 3, "Intensity")
+    app.addInput(actionGreen, "knob", 4, "Intensity")
     app.addInput(actionStrobe, "knob", 7, "Intensity")
     app.addInput(actionStrobe, "knob", 8, "Speed")
     app.addInput(actionStrobeMute, "knob", 10, "Speed")
