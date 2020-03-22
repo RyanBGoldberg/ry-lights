@@ -16,6 +16,7 @@ def initialize(app, params):
     params["PIN_B"] = 24
 
     # Create Actions
+    # Comment
     actionWhite = app.addAction(ActionColor(params))
     actionBlue = app.addAction(ActionColor(params, Color(0, 0, 255)))
     actionGreen = app.addAction(ActionColor(params, Color(0, 255, 0)))
