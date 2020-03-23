@@ -38,7 +38,7 @@ def initialize(app, params):
     app.addInput(actionStrobe, "knob", 2, "Intensity")
     app.addInput(actionChaos, "knob", 3, "Intensity")
 
-
+    # COMMENT
     # app.addInput(actionMute, "hold", 45, "On")
     # app.addInput(actionChaos, "hold", 44, "Intensity")
     # app.addInput(actionWhite, "hold", 46, "Intensity")
