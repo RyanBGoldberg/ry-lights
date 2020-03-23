@@ -22,11 +22,13 @@ def initialize(app, params):
     actionGreen = app.addAction(ActionColor(params, Color(0, 255, 0)))
     actionRed = app.addAction(ActionColor(params, Color(255, 0, 0)))
 
+    actionColorTrigger = app.addAction(ActionColorTrigger(params))
+
     actionStrobe = app.addAction(ActionStrobe(params))
     actionStrobeMute = app.addAction(ActionStrobeMute(params))
     actionMute = app.addAction(ActionMute(params))
     actionChaos = app.addAction(ActionChaos(params))
-    # actionColorTrigger = app.addAction(ActionColorTrigger(params))
+
 
     # Bind Inputs to Actions
     app.addInput(actionBlue, "knob", 5, "Intensity")
@@ -38,7 +40,11 @@ def initialize(app, params):
     app.addInput(actionStrobe, "knob", 2, "Intensity")
     app.addInput(actionChaos, "knob", 3, "Intensity")
 
-    # COMMENT
+
+    app.addInput(actionColorTrigger, "trigger", 38, "Release")
+
+
+    # COMMENT 2
     # app.addInput(actionMute, "hold", 45, "On")
     # app.addInput(actionChaos, "hold", 44, "Intensity")
     # app.addInput(actionWhite, "hold", 46, "Intensity")
