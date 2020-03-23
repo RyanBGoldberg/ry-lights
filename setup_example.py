@@ -41,7 +41,7 @@ def initialize(app, params):
     app.addInput(actionChaos, "knob", 3, "Intensity")
 
 
-    app.addInput(actionColorTrigger, "trigger", 38, "Release")
+    app.addInput(actionColorTrigger, "trigger_hold", 38, "Sustain")
 
 
     # COMMENT 2
