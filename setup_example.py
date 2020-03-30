@@ -63,4 +63,4 @@ def initialize(app, params):
 
 
     # Use ActionBuilder (optional)
-    ActionBuilder.buildKeys(app, 48, 72, Color.red(), Color.blue(), attack = 50, sustain = 100, release=50 )
+    ActionBuilder.buildKeys(app, 48, 72, Color.red(), Color.blue(), attack=50, sustain=100, release=50 )
