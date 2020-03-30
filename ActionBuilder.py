@@ -1,4 +1,4 @@
-from actions.ActionColorTriggerHold import ActionColorTriggerHold
+from actions.ActionColorTrigger import ActionColorTrigger
 from Color import Color
 from midi_in.InputControl import InputControl
 
