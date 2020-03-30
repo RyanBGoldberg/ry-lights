@@ -41,9 +41,11 @@ def initialize(app, params):
 
     app.addInput(actionBlue, "knob", 5, "Intensity")
     app.addInput(actionGreen, "knob", 6, "Intensity")
-    app.addInput(actionRed, "knob", 7, "Intensity")
+    # app.addInput(actionRed, "knob", 7, "Intensity")
     # app.addInput(actionWhite, "knob", 8, "Intensity")
-    app.addInput(actionColorTrigger, "knob", 8, "Attack")
+    app.addInput(actionColorTrigger, "knob", 7, "Sustain")
+    app.addInput(actionColorTrigger, "knob", 8, "Release")
+
 
 
     # Trigger Hold
@@ -61,4 +63,4 @@ def initialize(app, params):
 
 
     # Use ActionBuilder (optional)
-    ActionBuilder.buildKeys(app, 48, 72, Color.red(), Color.blue())
+    ActionBuilder.buildKeys(app, 48, 72, Color.red(), Color.blue(), attack = 50, sustain = 100, release=50 )
