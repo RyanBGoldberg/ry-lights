@@ -22,8 +22,10 @@ def initialize(app, params):
     actionGreen = app.addAction(ActionColor(params, Color(0, 255, 0)))
     actionRed = app.addAction(ActionColor(params, Color(255, 0, 0)))
 
-    actionColorTrigger = app.addAction(ActionColorTrigger(params))
+    #Ryan Added
+    actionColorTrigger = app.addAction(ActionColorTrigger(params, Color(0, 0, 255), 100, 100, 100))
 
+    #Existing Actions
     actionStrobe = app.addAction(ActionStrobe(params))
     actionStrobeMute = app.addAction(ActionStrobeMute(params))
     actionMute = app.addAction(ActionMute(params))
@@ -31,16 +33,20 @@ def initialize(app, params):
 
 
     # Bind Inputs to Actions
+    # Knob
+    app.addInput(actionStrobe, "knob", 1, "Speed")
+    app.addInput(actionStrobe, "knob", 2, "Intensity")
+    app.addInput(actionStrobeMute, "knob", 3, "Mute")
+    app.addInput(actionStrobeMute, "knob", 4, "Speed")
+
     app.addInput(actionBlue, "knob", 5, "Intensity")
     app.addInput(actionGreen, "knob", 6, "Intensity")
     app.addInput(actionRed, "knob", 7, "Intensity")
-    app.addInput(actionWhite, "knob", 8, "Intensity")
-
-    app.addInput(actionStrobe, "knob", 1, "Speed")
-    app.addInput(actionStrobe, "knob", 2, "Intensity")
-    app.addInput(actionChaos, "knob", 3, "Intensity")
+    # app.addInput(actionWhite, "knob", 8, "Intensity")
+    app.addInput(actionColorTrigger, "knob", 8, "Attack")
 
 
+    # Trigger Hold
     app.addInput(actionColorTrigger, "trigger_hold", 38, "Sustain")
 
 

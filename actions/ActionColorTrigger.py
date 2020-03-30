@@ -9,7 +9,7 @@ from Color import Color
 #	Release(0) - Time of the actions release
 ###
 class ActionColorTrigger(Action):
-	def __init__(self, params, color = Color.white(), attack=0, sustain=20, release=0):
+	def __init__(self, params, color = Color.white(), attack=0, sustain=100, release=50):
 		super(ActionColorTrigger, self).__init__(params)
 		self.settings["Attack"] = attack
 		self.settings["Sustain"] = sustain
