@@ -98,7 +98,7 @@ class App:
                     midiInput.toggle(self.params)
                 if(midiInput.type == "hold"):
                     midiInput.hold(self.params, 255 if state > 0 else 0)
-                if(midiInput.type == "knob"):
+                if midiInput.type == "knob":
                     midiInput.knob(self.params, state)
 
 App().main()
